@@ -1,0 +1,274 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args)
+	{
+// 1. string reverse
+Scanner obj=new Scanner(System.in);
+System.out.println("enter the string:");
+String name=obj.next();
+		/*System.out.println(name.length());
+		char [] c= name.toCharArray();
+		for(int i=c.length-1;i>=0;i--)
+		{
+		    System.out.print(c[i]);
+		}*/
+//2.palindrome
+		/*System.out.println(name.length());
+		char[] c= name.toCharArray();
+		String newstr=" ";
+		for(int i=c.length-1;i>=0;i--)
+		{
+		    newstr=newstr+c[i];
+		     System.out.println(newstr);
+		    if(name!=newstr)
+		    {
+		        System.out.println("the string is palidrome");
+		    }
+		    else
+		    {
+		        System.out.println("the string is not palindrome");
+		    }
+		}*/
+// vowels and cosonants
+     /*int vowels=0, consonants=0;
+System.out.println(" the len of string is:"+name.length());
+char[] c=name.toCharArray();
+for(char t: c)
+{
+  if(t>='a'&&t<='z')  
+  {
+      if(t =='a'||t =='e'||t =='i'||t =='o'||t =='u')
+      {
+          vowels++;
+      }
+      else{
+          consonants++;
+      }
+      System.out.println("vowels"+vowels);
+      System.out.println("consonants" +consonants);
+  }
+}*/
+// no.of occurence
+    /*  int count=0;
+      System.out.println("enter string name2:");		
+	  String name2= obj.next();
+	  int i=name.indexOf(name2);
+	  while(i>=0)
+	  {
+	      i=name.indexOf(name2,i+1);
+	      count++;
+	  }
+	  System.out.println(count);*/
+//number of words
+   /*String [] s=name.split("");
+   for( String newstr :s)
+   {
+     System.out.println(newstr); 
+   }
+     System.out.println("the number of word:"+s.length);*/
+ //sorting 
+     /* System.out.println("enter the number of string:");
+      int n=obj.nextInt();
+      String [] s=new String[n];
+      for(int i=0;i<n;i++)
+      {
+         s[i]=obj.next();
+      }
+      String temp="";
+      for(int i=0;i<n;i++)
+      {
+          for(int j=i+1;j<n;j++)
+          {
+              if(s[i].compareTo(s[j])>0)
+              {
+                  temp= s[i];
+                  s[i]=s[j];
+                  s[j]=temp;
+              }
+          }
+      }
+      for (String sort:s)
+      {
+          System.out.println(sort);
+      }*/
+ // anagram
+ /*System.out.println("enter the string:");
+ String name1=obj.next();
+ Main m= new Main();
+ String s1=m.sort(name.toCharArray());
+ String s2=m.sort(name1.toCharArray());
+ if(s1.equals(s2))
+ {
+     System.out.println(" anagram");
+ }
+ else{
+ System.out.println("not anagram");
+ }
+	}
+String sort(char a[])
+ {
+     char temp;
+    for(int i=0;i<a.length;i++)
+    {
+      for(int j=i+1;j<a.length;j++) 
+      {
+        if(a[i]>a[j]) 
+        {
+            temp=a[i];
+            a[i]=a[j];
+            a[j]=temp;
+        }
+      }
+    }
+ String value=String.valueOf(a);
+ return value;*/
+ //change two String
+ /*System.out.println("enter the string:");
+ String name2=obj.next();
+ name=name+name2;
+ name2=name.substring(0,name.length()-name2.length());
+ name=name.substring(name2.length());
+ System.out.println(name);
+ System.out.println(name2);*/
+ //capitalize first letter
+   /* String temp=Character.toUpperCase(name.charAt(0))+name.substring(1);
+     System.out.println(temp);*/
+//valid user name
+    /*if(name.matches("[a-z]+"))
+    {
+         System.out.println("valid user name");
+    }
+    else{
+         System.out.println("invalid user name");
+    }*/
+//remove the duplicate Character.......
+  /* String str=new String();
+   for(int i=0;i<name.length();i++)
+   {
+       for(int j=0;j<str.length();j++)
+       {
+           if(name.charAt(i)!=str.charAt(j))
+           {
+               str=str+name.charAt(i);
+           }
+       }
+   }
+    System.out.println(str); */ 
+//remove digit
+   /* String temp="";
+    char c;
+    for(int i=0;i<name.length();i++)
+    {
+      c=name.charAt(i) ;
+      if(Character.isLetter(c))
+      {
+          temp=temp+c;
+      }
+    }
+     System.out.println(temp);*/
+// count the no.of Character
+  /*String t="";int count=0;
+  char c;
+  for(int i=0;i<name.length();i++)
+  {
+      c=name.charAt(i);
+      if(Character.isLetter(c))
+      {
+          t=t+c;
+          if( c=='s')
+          {
+              count++;
+          }
+        }
+  }
+   System.out.println(t);
+   System.out.println(count);*/
+ //ASCII value
+   /* String t="";
+    char c;
+    for(int i=0;i<name.length();i++)
+    {
+        c=name.charAt(i);
+         System.out.println((int)c); 
+    }*/
+ //print the upper character 
+  /* String temp="";
+   char c;
+   for(int i=0;i<name.length();i++)
+	{
+	    c=name.charAt(i);
+	    if(Character.isUpperCase(c))
+	    {
+	        temp=temp+c;
+	        }
+	   }
+	    System.out.println(temp); */
+//count lowercase character
+  /*String temp="";
+  int count=0;
+  char c;
+  for(int i=0;i<name.length();i++)
+  {
+      c=name.charAt(i);
+      temp=temp+c;
+      if(Character.isLowerCase(c))
+      {
+          count++;
+      }
+  }
+    System.out.println(temp);
+   System.out.println(count); */
+//string with first letter digit
+   /* char c;
+    StringBuilder newstr=new StringBuilder();
+   for(int i=1;i<name.length();i++)
+   {
+       c=name.charAt(i);
+       if(Character.isDigit(c))
+       {
+           newstr.insert(0,c);
+       }
+       else
+       {
+          newstr.append(c);
+       }
+     }
+       System.out.println("string is:"+newstr.toString());*/
+//remove the space in string...........
+    /*String space=name.replaceAll("\\s","");
+     System.out.println(space); */ 
+//reverse the case of String
+   /*StringBuffer str=new StringBuffer(name);
+   for(int i=0;i<name.length();i++)
+   {
+    if(Character.isLowerCase(name.charAt(i)))
+    {
+        str.setCharAt(i,Character.toUpperCase(name.charAt(i)));
+    }
+    else if(Character.isUpperCase(name.charAt(i)))
+    {
+     str.setCharAt(i,Character.toLowerCase(name.charAt(i)));   
+   }
+   }
+   System.out.println(str);*/
+ //piglatin
+/* char[] c=name.toCharArray();
+ for(int i=0;i<name.length();i++)
+ { 
+    char s=name.charAt(i);
+    if(s=='a'||s=='e'||s=='i'||s=='o'||s=='u')
+    {
+        if(i=='o')
+        {
+            System.out.println(name+"hello");
+        }
+        else{
+           name= name.substring(i)+name.substring(0,i)+"shhhh";
+           System.out.println(name);
+           break;
+        }
+    }
+ }*/
+}
+}
